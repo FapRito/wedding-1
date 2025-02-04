@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #fff;
+  background-color: #f0f8ff; /* nền xanh nhạt */
   color: #333;
   line-height: 1.6;
 }
@@ -25,18 +25,26 @@ header .header-content {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-header h1 {
-  font-size: 3em;
+header .main-title {
+  font-size: 3.5em;
   margin: 0;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 4px 4px 8px rgba(0,0,0,0.6);
+  animation: popIn 1s ease-out;
 }
-header p {
-  font-size: 1.5em;
+header .wedding-date {
+  font-size: 1.8em;
+}
+
+/* Animation cho tiêu đề chính */
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  80% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
 }
 
 /* Menu điều hướng */
 nav.main-nav {
-  background: rgba(255, 105, 180, 0.9); /* màu hồng nhẹ */
+  background: linear-gradient(45deg, #007BFF, #28a745); /* gradient xanh biển - xanh lá */
   padding: 10px 0;
   position: sticky;
   top: 0;
@@ -59,7 +67,7 @@ nav.main-nav a {
   transition: color 0.3s ease;
 }
 nav.main-nav a:hover {
-  color: #ffd700; /* vàng */
+  color: #f0f8ff;
 }
 
 /* Các section */
@@ -68,9 +76,12 @@ section {
   text-align: center;
 }
 section h2 {
-  color: #ff69b4; /* hồng */
+  color: #007BFF;
   margin-bottom: 20px;
+  position: relative;
 }
+section h2::after {
+  content: '';\n  width: 50px;\n  height: 4px;\n  background: #28a745;\n  display: block;\n  margin: 10px auto 0 auto;\n  border-radius: 2px;\n}
 
 /* Slideshow Gallery */
 .slideshow-container {
@@ -118,7 +129,7 @@ section h2 {
 }
 .timeline li {
   background: #fff;
-  border-left: 5px solid #ff69b4;
+  border-left: 5px solid #007BFF;
   margin-bottom: 20px;
   padding: 20px;
   position: relative;
@@ -131,15 +142,15 @@ section h2 {
   top: 20px;
   width: 20px;
   height: 20px;
-  background: #ffd700; /* vàng */
+  background: #28a745;
   border-radius: 50%;
 }
 
 /* Quotes */
 .quotes blockquote {
   font-style: italic;
-  background: #fff0f5;
-  border-left: 5px solid #ff69b4;
+  background: #e0f7fa;
+  border-left: 5px solid #007BFF;
   padding: 20px;
   margin: 20px auto;
   max-width: 800px;
@@ -159,16 +170,16 @@ section h2 {
 #wishForm input, #wishForm textarea {
   padding: 10px;
   margin-bottom: 15px;
-  border: 2px solid #ff69b4;
+  border: 2px solid #007BFF;
   border-radius: 5px;
   outline: none;
   transition: border-color 0.3s ease;
 }
 #wishForm input:focus, #wishForm textarea:focus {
-  border-color: #ffd700;
+  border-color: #28a745;
 }
 #wishForm button {
-  background: #ff69b4;
+  background: #007BFF;
   color: #fff;
   border: none;
   padding: 10px;
@@ -176,7 +187,7 @@ section h2 {
   transition: background 0.3s ease;
 }
 #wishForm button:hover {
-  background: #e055a1;
+  background: #0056b3;
 }
 
 /* Hiển thị lời chúc */
@@ -197,12 +208,12 @@ section h2 {
 /* Countdown */
 #countdownTimer {
   font-size: 1.5em;
-  color: #ff69b4;
+  color: #007BFF;
 }
 
 /* Social share */
 .social-share button {
-  background: #ffd700;
+  background: #28a745;
   border: none;
   padding: 10px 20px;
   margin: 5px;
@@ -213,7 +224,7 @@ section h2 {
   transition: background 0.3s ease;
 }
 .social-share button:hover {
-  background: #e6c200;
+  background: #1e7e34;
 }
 
 /* Nhạc nền control */
@@ -221,7 +232,7 @@ section h2 {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #ff69b4;
+  background: #007BFF;
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -230,7 +241,7 @@ section h2 {
   transition: background 0.3s ease;
 }
 .music-control:hover {
-  background: #e055a1;
+  background: #0056b3;
 }
 
 /* Responsive */
