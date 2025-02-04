@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chúc Mừng Đám Cưới - [Tên Cô Dâu & Tên Chú Rể]</title>
+  <title>Chúc Mừng Đám Cưới - [O & Tên H]</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <!-- ScrollReveal cho hiệu ứng animation -->
@@ -13,7 +13,7 @@
   <!-- Header với ảnh nền Parallax -->
   <header class="parallax" data-sr>
     <div class="header-content">
-      <h1>[Tên Cô Dâu] & [Tên Chú Rể]</h1>
+      <h1>[H] & [O]</h1>
       <p>Ngày cưới: [Ngày]</p>
     </div>
   </header>
@@ -58,7 +58,7 @@
   <section id="video" data-sr>
     <h2>Video Cưới</h2>
     <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/watch?v=Y8tQ2MK0ghU" frameborder="0" allowfullscreen></iframe>
     </div>
   </section>
 
@@ -135,7 +135,7 @@
 
   <!-- Nhạc nền với điều khiển play/pause -->
   <audio id="backgroundMusic" loop>
-    <source src="your-background-music.mp3" type="audio/mpeg">
+    <source src="CuoiNhauDiYesIDoTuanAnhFMTPRemix-BuiAnhTuanHienHoTuanAnhFMTP-6024896.mp3" type="audio/mpeg">
   </audio>
   <button id="musicControl" class="music-control">Play</button>
 
@@ -182,7 +182,7 @@
 
     // Bộ đếm ngược đến ngày cưới
     function countdownTimer() {
-      const weddingDate = new Date('2025-12-31T00:00:00'); // Thay đổi ngày cưới cho phù hợp
+      const weddingDate = new Date('2025-02-23T11:00:00'); // Thay đổi ngày cưới cho phù hợp
       const now = new Date();
       const diff = weddingDate - now;
       if(diff <= 0) {
@@ -199,12 +199,12 @@
     setInterval(countdownTimer, 1000);
 
     // Khởi tạo bản đồ với Leaflet.js
-    const map = L.map('leafletMap').setView([10.762622, 106.660172], 13);
+    const map = L.map('leafletMap').setView([10.8007119,106.6171514], 17);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
     }).addTo(map);
     L.marker([10.762622, 106.660172]).addTo(map)
-      .bindPopup('Địa điểm tổ chức')
+      .bindPopup('Nhà hàng tiệc cưới Kalina')
       .openPopup();
 
     // Điều khiển nhạc nền
