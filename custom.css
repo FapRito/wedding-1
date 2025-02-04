@@ -1,6 +1,6 @@
 /* Phần tử cha với hiệu ứng parallax */
 header.parallax {
-  background-image: url('header-bg.jpg'); /* Đường dẫn đến hình nền */
+  background-image: url('pngtree-wedding-romantic-pink-background-image_2116917.jpg'); /* Đường dẫn đến hình nền */
   min-height: 60vh;
   background-attachment: fixed;
   background-position: center;
@@ -36,7 +36,7 @@ header .main-title {
   font-weight: bold;
   color: #ffeb3b; /* Màu vàng sáng */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  margin: 0;
+  margin: 1;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
