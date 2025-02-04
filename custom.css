@@ -34,7 +34,7 @@ header .header-content {
 header .main-title {
   font-size: 4em;
   font-weight: bold;
-  color: #ffeb3b; /* Màu vàng sáng */
+  color:  #ffffff; /* Màu vàng sáng */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   margin: 1;
   transition: transform 0.3s ease, color 0.3s ease;
