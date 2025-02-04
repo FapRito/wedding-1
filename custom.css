@@ -1,0 +1,48 @@
+/* Header Parallax với overlay cho tiêu đề */
+header.parallax {
+  background-image: url('header-bg.jpg'); /* Thay bằng ảnh thực tế */
+  min-height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+/* Container chứa tiêu đề có overlay để tạo độ tương phản */
+header .header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);  /* overlay tối để chữ nổi bật */
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+/* Tiêu đề chính (tên cô dâu & chú rể) */
+header .main-title {
+  font-size: 4.5em;           /* Tăng kích thước chữ */
+  font-weight: 900;           /* In đậm hơn */
+  color: #ffeb3b;             /* Sử dụng màu vàng sáng để nổi bật */
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);  /* Hiệu ứng bóng đổ mạnh */
+  margin: 0;
+  animation: popIn 1s ease-out;
+}
+
+/* Ngày cưới */
+header .wedding-date {
+  font-size: 2em;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Keyframes animation cho tiêu đề */
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  80% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
