@@ -1,6 +1,6 @@
-/* Header Parallax với overlay cho tiêu đề */
+/* Phần tử cha với hiệu ứng parallax */
 header.parallax {
-  background-image: url('header-bg.jpg'); /* Thay bằng ảnh thực tế */
+  background-image: url('header-bg.jpg'); /* Đường dẫn đến hình nền */
   min-height: 60vh;
   background-attachment: fixed;
   background-position: center;
@@ -11,38 +11,72 @@ header.parallax {
   color: #fff;
 }
 
-/* Container chứa tiêu đề có overlay để tạo độ tương phản */
-header .header-content {
+/* Lớp phủ màu tối để tạo độ tương phản cho văn bản */
+header.parallax::before {
+  content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.6);  /* overlay tối để chữ nổi bật */
-  padding: 20px 30px;
-  border-radius: 10px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt 50% */
+  z-index: 1;
 }
 
-/* Tiêu đề chính (tên cô dâu & chú rể) */
+/* Nội dung tiêu đề */
+header .header-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+/* Tiêu đề chính */
 header .main-title {
-  font-size: 4.5em;           /* Tăng kích thước chữ */
-  font-weight: 900;           /* In đậm hơn */
-  color: #ffeb3b;             /* Sử dụng màu vàng sáng để nổi bật */
-  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);  /* Hiệu ứng bóng đổ mạnh */
+  font-size: 4em;
+  font-weight: bold;
+  color: #ffeb3b; /* Màu vàng sáng */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   margin: 0;
-  animation: popIn 1s ease-out;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hiệu ứng hover cho tiêu đề chính */
+header .main-title:hover {
+  color: #fff;
+  transform: scale(1.1);
 }
 
 /* Ngày cưới */
 header .wedding-date {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 600;
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  transition: color 0.3s ease;
 }
 
-/* Keyframes animation cho tiêu đề */
-@keyframes popIn {
-  0% { transform: scale(0.5); opacity: 0; }
-  80% { transform: scale(1.1); opacity: 1; }
-  100% { transform: scale(1); }
+/* Hiệu ứng hover cho ngày cưới */
+header .wedding-date:hover {
+  color: #ffeb3b;
+}
+
+/* Hiệu ứng xuất hiện cho tiêu đề */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header .main-title {
+  animation: fadeInUp 1s ease-out;
+}
+
+header .wedding-date {
+  animation: fadeInUp 1s ease-out 0.5s;
 }
