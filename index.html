@@ -199,11 +199,11 @@
     setInterval(countdownTimer, 1000);
 
     // Khởi tạo bản đồ với Leaflet.js
-    const map = L.map('leafletMap').setView([10.8004293,106.6179685);
+    const map = L.map('leafletMap').setView([10.8004293,106.6179685] ,15);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
     }).addTo(map);
-    L.marker([10.8004293,106.6179685]).addTo(map)
+    L.marker([10.8004293,106.6179685] ,17).addTo(map)
       .bindPopup('Nhà hàng tiệc cưới Kalina')
       .openPopup();
 
