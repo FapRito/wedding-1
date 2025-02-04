@@ -1,7 +1,7 @@
 /* Tổng thể */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Playfair Display', sans-serif;
   background-color: #f0f8ff; /* nền xanh nhạt */
   color: #333;
   line-height: 1.6;
@@ -17,7 +17,7 @@ header.parallax {
   background-size: cover;
   position: relative;
   text-align: center;
-  color: #fff;
+  color: #00f6ff;
 }
 header .header-content {
   position: absolute;
