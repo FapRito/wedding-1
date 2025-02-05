@@ -1,11 +1,11 @@
 /* Tổng thể */
 body {
-            font-family: 'Playfair Display', serif;
-            margin: 0;
-            background: #fffaf0;
-            color: var(--text-color);
-            scroll-behavior: smooth;
-        }
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #f0f8ff; /* nền xanh nhạt */
+  color: #333;
+  line-height: 1.6;
+}
 
 /* Header Parallax */
 header.parallax {
